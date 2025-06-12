@@ -29,7 +29,8 @@ def validar_monto(max_intentos=3):
         
         intentos += 1   
 
-    raise ValueError("Número máximo de intentos alcanzado. Por favor, inténtelo más tarde.")
+    print("\n\nNúmero máximo de intentos alcanzado. Saliendo del programa.")
+    return None
 
 
 
