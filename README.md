@@ -44,7 +44,7 @@ Este repositorio no tiene como fin entregar productos finales cerrados, sino ser
 
 ## 👨‍💻 Autor
 
-**Álvaro D. Vidal Velasque**  
+**Alvaro D. Vidal Velasque**  
 Estudiante de Desarrollo de Sistemas – IDAT  
 Contacto: alvaro.vidal1403@gmail.com  
-GitHub: [github.com/tu_usuario](https://github.com/tu_usuario)
+GitHub: [github.com/tu_usuario](https://github.com/AlvaroVidal21)
