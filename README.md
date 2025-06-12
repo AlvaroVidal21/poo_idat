@@ -38,7 +38,7 @@ El enfoque de trabajo privilegia la **comprensión conceptual**, la **organizaci
 
 Este repositorio no tiene como fin entregar productos finales cerrados, sino servir como **bitácora técnica y pedagógica** del proceso de aprendizaje en Programación Orientada a Objetos. Cada avance busca articular la lógica de la programación con la claridad didáctica necesaria para el desarrollo profesional y autónomo del pensamiento computacional.
 
-> *"Aprender a programar es aprender a pensar. Y pensar bien exige claridad, orden y propósito."*
+> *"En programación, lo que no imaginas con precisión, no existe. No importa cuánto escribas. Ese es el principio."*
 
 ---
 
