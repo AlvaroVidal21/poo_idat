@@ -46,5 +46,5 @@ Este repositorio no tiene como fin entregar productos finales cerrados, sino ser
 
 **Alvaro D. Vidal Velasque**  
 Estudiante de Desarrollo de Sistemas – IDAT  
-Contacto: alvaro.vidal1403@gmail.com  
-GitHub: [github.com/tu_usuario](https://github.com/AlvaroVidal21)
+Contacto: alvaro.vidal1403@gmail.com | alvaro.vidal1@unmsm.edu.pe
+GitHub: [github.com/AlvaroVidal21](https://github.com/AlvaroVidal21)
