@@ -12,7 +12,7 @@ Este proyecto es una aplicación de escritorio desarrollada en Python utilizando
 
 ## Requisitos
 
-- Python 3.x
+- Python 3.13.5
 - PyQt5
 
 Puedes instalar PyQt5 ejecutando:
