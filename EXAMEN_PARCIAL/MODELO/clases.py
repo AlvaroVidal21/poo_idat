@@ -44,7 +44,7 @@ class Libro:
 
     def get_info(self) -> str:
         estado = "Disponible" if self.__disponible else "No disponible"
-        return f'{self.titulo} - {self.autor} - Estado: {estado}'
+        return f'{self.titulo} - {self.autor} - Estado: {estado} - ISBN: {self.isbn}'
 
 
     def get_isbn(self) -> str:
