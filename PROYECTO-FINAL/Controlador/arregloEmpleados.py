@@ -20,10 +20,10 @@ class ArregloEmpleados():
         return len(self.dataEmpleado)
 
     def buscarEmpleado(self, dni): # Busca los Empleados por dni
-        for i in range (self.tamañoArregloEmpleado()):
+        for i in range(self.tamañoArregloEmpleado()):
             if dni == self.dataEmpleado[i].getDniEmpleado():
-                return i # devuelve la posicion del elemento encontrado
-            return -1  # signfica que no encontro ningun dato
+                return i  # devuelve la posicion del elemento encontrado
+        return -1  # significa que no encontro ningun dato
 
     def eliminarEmpleado(self, pos): # Elimina los Empleados
         del(self.dataEmpleado[pos])
@@ -33,6 +33,17 @@ class ArregloEmpleados():
 
     def retornarDatos(self): # retorna los datos de los Empleados
         return self.dataEmpleado
+
+
+if __name__ == "__main__":
+    # Prueba manual: insertar dos empleados y buscar el segundo
+    arreglo = ArregloEmpleados()
+    emp1 = empleado("111", "Juan", "Perez", "Lopez", "Calle 1", "999999")
+    emp2 = empleado("222", "Ana", "Gomez", "Diaz", "Calle 2", "888888")
+    arreglo.adicionaEmpleado(emp1)
+    arreglo.adicionaEmpleado(emp2)
+    resultado = arreglo.buscarEmpleado("222")
+    print(f"Posición del empleado con DNI 222: {resultado}")
 
     
             
