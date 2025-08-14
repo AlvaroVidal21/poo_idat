@@ -43,3 +43,25 @@ class empleado():
         return self.__telefonoEmpleado
     def setTelefonoEmpleado(self, telefonoEmpleado):
         self.__telefonoEmpleado=telefonoEmpleado
+
+    # utilidades para trabajar con archivos CSV
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            data["dni"],
+            data["nombres"],
+            data["apellido_paterno"],
+            data["apellido_materno"],
+            data["direccion"],
+            data["telefono"],
+        )
+
+    def to_dict(self):
+        return {
+            "dni": self.getDniEmpleado(),
+            "nombres": self.getNombresEmpleado(),
+            "apellido_paterno": self.getApellidoPaternoEmpleado(),
+            "apellido_materno": self.getApellidoMaternoEmpleado(),
+            "direccion": self.getDireccionEmpleado(),
+            "telefono": self.getTelefonoEmpleado(),
+        }
