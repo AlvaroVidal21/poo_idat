@@ -67,22 +67,22 @@ class VentanaClientes(QtWidgets.QMainWindow):
 
     def valida(self):
         if self.txtDni.text() =="":
-            self.txtDni.setfocus()
+            self.txtDni.setFocus()
             return "DNI del cliente...!!!"
         elif self.txtNombres.text()=="":
-            self.txtNombres.setfocus()
+            self.txtNombres.setFocus()
             return "Nombre del cliente...!!!"
         elif self.txtApellidoPaterno.text()=="":
-            self.txtApellidoPaterno.setfocus()
+            self.txtApellidoPaterno.setFocus()
             return "Apellido Paterno del cliente...!!!"
         elif self.txtApellidoMaterno.text()=="":
-            self.txtApellidoMaterno.setfocus()
+            self.txtApellidoMaterno.setFocus()
             return "Apellido Mateno del cliente...!!!"
         elif self.txtDireccion.text()=="":
-            self.txtDireccion.setfocus()
+            self.txtDireccion.setFocus()
             return "Direccion del cliente...!!!"
         elif self.txtTelefono.text()=="":
-            self.txtTelefono.setfocus()
+            self.txtTelefono.setFocus()
             return "Telefono del cliente...!!!"
         else:
             return ""
