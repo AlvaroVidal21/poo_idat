@@ -53,7 +53,7 @@ class ArregloEmpleados:
     def buscarEmpleado(self, dni):  # Busca los Empleados por dni
         for i in range(self.tamañoArregloEmpleado()):
             if dni == self.dataEmpleado[i].getDniEmpleado():
-                return i  # devuelve la posicion del elemento encontrado
+                return i # devuelve la posicion del elemento encontrado
         return -1  # signfica que no encontro ningun dato
 
     def eliminarEmpleado(self, pos):  # Elimina los Empleados
