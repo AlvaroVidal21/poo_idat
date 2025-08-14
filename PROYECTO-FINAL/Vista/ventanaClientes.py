@@ -210,3 +210,7 @@ class VentanaClientes(QtWidgets.QMainWindow):
                 #aCli.grabar()
                 self.limpiarControles()
                 self.listar()
+            else:
+                QtWidgets.QMessageBox.information(self, "Modificar Cliente",
+                                                      "El DNI ingresado no existe... !!!",
+                                                      QtWidgets.QMessageBox.Ok)
