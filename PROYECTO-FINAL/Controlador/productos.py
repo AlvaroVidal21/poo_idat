@@ -67,3 +67,31 @@ class producto():
     def setAlmacenProducto(self, almacenProducto):
         self.__almacenProducto = almacenProducto
 
+    # utilidades para trabajar con archivos CSV
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            data["codigo"],
+            data["nombre"],
+            data["descripcion"],
+            data["stock_minimo"],
+            data["stock_actual"],
+            data["precio_costo"],
+            data["precio_venta"],
+            data["proveedor"],
+            data["almacen"],
+        )
+
+    def to_dict(self):
+        return {
+            "codigo": self.getCodigoProducto(),
+            "nombre": self.getNombreProducto(),
+            "descripcion": self.getDescripcionProducto(),
+            "stock_minimo": self.getStockMinimoProducto(),
+            "stock_actual": self.getStockActualProducto(),
+            "precio_costo": self.getPrecioCostoProducto(),
+            "precio_venta": self.getPrecioVentaProducto(),
+            "proveedor": self.getProveedorProducto(),
+            "almacen": self.getAlmacenProducto(),
+        }
+

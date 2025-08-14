@@ -1,17 +1,51 @@
 from Controlador.productos import producto
+import csv
+import os
+
 # Mantenimiento para los productos
 
-class ArregloProductos():
+class ArregloProductos:
+    CAMPOS = [
+        "codigo",
+        "nombre",
+        "descripcion",
+        "stock_minimo",
+        "stock_actual",
+        "precio_costo",
+        "precio_venta",
+        "proveedor",
+        "almacen",
+    ]
 
-    # Atributo
-    dataProducto = []  # <-- Nuestra base de datos
-
-    # Constructor (vacío)
     def __init__(self):
-        pass
+        self.__archivo = os.path.join(os.path.dirname(__file__), 'productos.csv')
+        self.dataProducto = []  # <-- Nuestra base de datos en memoria
+        self.cargar()
 
+    # ---------------------------
+    # Métodos de persistencia
+    # ---------------------------
+    def cargar(self):
+        if os.path.exists(self.__archivo):
+            with open(self.__archivo, newline='', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row:
+                        self.dataProducto.append(producto.from_dict(row))
+
+    def grabar(self):
+        with open(self.__archivo, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=self.CAMPOS)
+            writer.writeheader()
+            for pro in self.dataProducto:
+                writer.writerow(pro.to_dict())
+
+    # ---------------------------
+    # Métodos de gestión
+    # ---------------------------
     def adicionaProducto(self, objpro):  # Graba los datos de los productos
         self.dataProducto.append(objpro)
+        self.grabar()
 
     def devolverProducto(self, pos):  # Retorna los datos de los productos
         return self.dataProducto[pos]
@@ -27,9 +61,11 @@ class ArregloProductos():
 
     def eliminarProducto(self, pos):  # Elimina los productos
         del (self.dataProducto[pos])
+        self.grabar()
 
     def modificarProducto(self, objpro, pos):  # Modifica datos de los productos
         self.dataProducto[pos] = objpro
+        self.grabar()
 
     def retornarDatos(self):  # retorna los datos de los productos
         return self.dataProducto

@@ -43,3 +43,27 @@ class cliente():
         return self.__telefonoCliente
     def setTelefonoCliente(self, telefonocliente):
         self.__telefonoCliente=telefonocliente
+
+    # utilidades para trabajar con archivos CSV
+    @classmethod
+    def from_dict(cls, data):
+        """Crea un objeto ``cliente`` a partir de un diccionario."""
+        return cls(
+            data["dni"],
+            data["nombres"],
+            data["apellido_paterno"],
+            data["apellido_materno"],
+            data["direccion"],
+            data["telefono"],
+        )
+
+    def to_dict(self):
+        """Convierte el objeto a un diccionario serializable."""
+        return {
+            "dni": self.getDniCliente(),
+            "nombres": self.getNombresCliente(),
+            "apellido_paterno": self.getApellidoPaternoCliente(),
+            "apellido_materno": self.getApellidoMaternoCliente(),
+            "direccion": self.getDireccionCliente(),
+            "telefono": self.getTelefonoCliente(),
+        }
