@@ -23,7 +23,7 @@ class ArregloEmpleados():
         for i in range (self.tamañoArregloEmpleado()):
             if dni == self.dataEmpleado[i].getDniEmpleado():
                 return i # devuelve la posicion del elemento encontrado
-            return -1  # signfica que no encontro ningun dato
+        return -1  # signfica que no encontro ningun dato
 
     def eliminarEmpleado(self, pos): # Elimina los Empleados
         del(self.dataEmpleado[pos])
